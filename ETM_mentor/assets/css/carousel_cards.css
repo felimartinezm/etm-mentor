@@ -1,0 +1,205 @@
+.prox_reuniones h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card {
+  border: 3px solid #e9e9e9;
+  border-radius: 20px;
+  font-family: campton;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .card {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .card {
+    margin-left: 110%;
+    width: 110%;
+  }
+}
+.card .card-body {
+  background-color: #e9e9e9;
+  margin: 8px;
+  border-radius: 20px;
+  text-align: center;
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  .card .card-body {
+    padding: 5px;
+  }
+}
+.card .card-body h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+.card .card-body h4 {
+  font-size: 12px;
+  font-weight: normal;
+}
+.card .card-body h5 {
+  font-size: 12px;
+  font-weight: bold;
+}
+.card .card-dos {
+  margin-left: 8px;
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  .card .card-dos {
+    margin-left: 0;
+    padding: 0px;
+  }
+}
+.card .card-dos .img-perfil {
+  height: 50px;
+  width: 50px;
+}
+.card .card-dos .card-datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+.card .card-dos .card-datos h3 {
+  font-size: 12px;
+  font-weight: bold;
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  .card .card-dos .card-datos h3 {
+    font-size: 10px;
+  }
+}
+.card .card-dos .card-datos h5 {
+  font-size: 12px;
+  font-weight: normal;
+}
+.card .lineas {
+  margin-left: 2em;
+  margin-right: 2em;
+  color: gray;
+}
+@media (max-width: 992px) {
+  .card .lineas {
+    display: none;
+  }
+}
+.card .estrellas {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 8px;
+}
+@media (min-width: 993px) and (max-width: 1024px) {
+  .card .estrellas {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 992px) {
+  .card .estrellas {
+    display: none;
+  }
+}
+.card .estrellas .stars {
+  width: 10px;
+  height: 10px;
+}
+.card .img-emprendedor {
+  margin-top: 10px;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  .card .img-emprendedor {
+    margin: 0;
+    padding: 0;
+  }
+}
+.card .img-emprendedor .imagen {
+  width: 33px;
+  height: 33px;
+  border-radius: 26.5px;
+}
+.card .img-emprendedor h5 {
+  font-size: 13px;
+  font-weight: normal;
+}
+.card .img-emprendedor span {
+  font-weight: bold;
+}
+.card .redes {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .card .redes {
+    display: none;
+  }
+}
+.card .redes .rrss {
+  width: 10px;
+  height: 10px;
+}
+.card .redes h4 {
+  color: #e9e9e9;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+    transform: translateX(33.333%);
+  }
+
+  .carousel-inner .carousel-item-left.active,
+.carousel-inner .carousel-item-prev {
+    transform: translateX(-33.333%);
+  }
+}
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+  transform: translateX(0);
+}
+
+.carousel-control-next-icon {
+  background-image: url("../img/svg/NAVEGADOR PROXIMAS REUNIONES.svg");
+  transform: rotate(180deg);
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../img/svg/NAVEGADOR PROXIMAS REUNIONES.svg");
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}

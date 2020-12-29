@@ -1,0 +1,313 @@
+/* esquema de colores */
+$white: #ffffff;
+$black: #000000;
+$blue: #009fe3;
+$grey: #3a3a38;
+$light-grey: #818181;
+
+/* tipografías */
+@mixin h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@mixin h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@mixin h3 {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+@mixin h4 {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+@mixin h5 {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+@mixin h6 {
+    font-size: 11px;
+    font-weight: lighter;
+}
+
+@mixin boton_h1 {
+    font-size: 16px;
+    font-weight: normal;
+    ;
+}
+
+@mixin boton_h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+@mixin boton_h3 {
+    font-size: 9px;
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'camptonbold_demo';
+    src: url('campton-bold-webfont.eot');
+    src: url('campton-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('campton-bold-webfont.woff2') format('woff2'),
+        url('campton-bold-webfont.woff') format('woff'),
+        url('campton-bold-webfont.ttf') format('truetype'),
+        url('campton-bold-webfont.svg#camptonbold_demo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'camptonlight_demo';
+    src: url('campton-light-webfont.eot');
+    src: url('campton-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('campton-light-webfont.woff2') format('woff2'),
+        url('campton-light-webfont.woff') format('woff'),
+        url('campton-light-webfont.ttf') format('truetype'),
+        url('campton-light-webfont.svg#camptonlight_demo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: campton;
+    .main{
+        background-color: #f9f9f9;
+    }
+}
+
+.navbar{
+    .contenedor-perfil{
+        @media (min-width: 1025px){
+           height: 140vh!important; 
+        }        
+        @media (min-width: 769px) and (max-width: 1024px){
+        height: 140vh !important;
+        }   
+        @media (max-width:768px){
+            height: auto !important;
+        } 
+    }
+}
+
+
+/* formulario */
+.perfil {
+    
+    h3{
+    @include h1;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+    
+
+    .datos-perfil {
+
+
+        .foto-perfil {
+            @media (max-width: 768px) {
+                margin-left: auto;
+            }
+
+            .img-perfil {
+                width: 150px;
+            }
+        }
+
+        .formulario-principal {
+            div {
+                padding: 10px;
+
+                label {
+                    font-weight: bold;
+                }
+
+                input {
+                    width: 100%;
+                    font-weight: lighter;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    border-bottom-color: #dadada;
+                    outline-style: none;
+                    background: transparent;
+                    &:focus{
+                        border-bottom: 1px solid #009FE3!important;
+                      }
+                }
+
+                select {
+                    width: 100%;
+                    font-weight: lighter;
+                    color: $light-grey;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    background-color: transparent;
+                    outline-style: none;
+                }
+
+                .subir-archivo {
+                    input[type="file"] {
+                        display: none;
+                    }
+
+
+                    .borde {
+                        border-style: dotted;
+                        border-width: 2px;
+                        border-radius: 12px;
+                        border-color: $light-grey;
+
+                        .cam {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            background-color: $light-grey;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .boton {
+                            padding-bottom: 20px;
+                            &:hover{
+                                transform: scale(1.1);
+                            }
+                        }
+
+                        .etiqueta {
+                            border-radius: 22px;
+                            display: inline-block;
+                            padding: 6px 12px;
+                            cursor: pointer;
+                            font-size: 12px;
+                            font-weight: normal;
+                            color: $white;
+                            background-color: $blue;
+                            opacity: 80%;
+                        }
+
+                        img {
+                            width: 30px;
+                        }
+                    }
+                }
+
+                button {
+                    border: none;
+                    outline-style: none;
+                    border-radius: 22px;
+                    font-size: 15px;
+                    color: $white;
+                    background-color: $blue;
+                    padding: 6px 95px;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/*nuestros partners */
+.partners {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    h1 {
+        @include h2;
+        padding: 2em 2em 0 2em;
+    }
+
+    .slider {
+        img {
+            height: 110px;
+            width: 200px;
+        }
+    }
+}
+
+.linea {
+    height: 0;
+
+    .azul {
+        height: 5px;
+        width: 218px;
+        margin-top: -25px;
+        background-color: transparent;
+
+    }
+}
+
+
+/* footer */
+.footer {
+    background-color: #000000;
+    padding: 3em;
+    .fas{
+        font-weight: 200 !important;
+    }
+
+    .logo-footer {
+        height: 90px;
+
+        @media (min-width: 992px) {
+            height: 70px;
+        }
+    }
+
+    .nuestros-contactos,
+    .nuestra-direccion,
+    .conecta {
+        padding-top: 1em;
+        
+
+        @media (min-width: 992px) {
+            padding-top: 0;
+        }
+    }
+
+    .icono_footer {
+        width: 11px;
+        height: 11px;
+    }
+
+    .h5_footer {
+        @include h5;
+        color: $light-grey;
+    }
+
+    .h6_footer {
+        @include h6;
+        color: $white;
+    }
+
+    span {
+        padding-right: 10px;
+    }
+
+    .conecta {
+        width: 30%;
+
+        .rrss {
+            height: 15px;
+        }
+    }
+}

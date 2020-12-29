@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* tipografías */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .slider {
+    height: 100% !important;
+    width: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .slider {
+    width: 100% !important;
+  }
+}
+@media (min-width: 667px) and (max-width: 668px) {
+  .slider .slide {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .slider .slide {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .slider .slide {
+    width: 100%;
+  }
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+.jumbotron {
+  border-radius: 0 !important;
+}
+
+.cajados {
+  margin-bottom: 0 !important;
+  box-shadow: 0 0 10px gray;
+  top: -3px;
+  height: 297px;
+  position: relative;
+  z-index: 100;
+  background-color: #ffffff;
+  background: url("../img/otros/Trama-Partners-Zoom.png");
+  background-size: cover;
+  text-align: center;
+  background-color: #ffffff;
+}
+.cajados h1 {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0 2em 0 2em;
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  .cajados {
+    height: auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .cajados {
+    height: auto !important;
+  }
+}
+.cajados hr.medio2 {
+  color: #3A3A38;
+  border-top: 1px solid #3A3A38 !important;
+  position: relative;
+  top: -2px;
+}

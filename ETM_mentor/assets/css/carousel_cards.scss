@@ -1,0 +1,230 @@
+ //esquema de colores 
+$white: #ffffff; $black: #000000; $blue: #009fe3; $grey: #3a3a38; $light-grey: #818181;
+
+//tipografías 
+@mixin h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+@mixin h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+@mixin h3 {
+    font-size: 15px;
+    font-weight: bold;
+}
+@mixin h4 {
+    font-size: 15px;
+    font-weight: lighter;
+}
+@mixin h5 {
+    font-size: 11px;
+    font-weight: bold;
+}
+@mixin h6 {
+    font-size: 11px;
+    font-weight: lighter;
+}
+@mixin boton_h1 {
+    font-size: 16px;
+    font-weight: normal; ;
+}
+@mixin boton_h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+@mixin boton_h3 {
+    font-size: 9px;
+    font-weight: normal;
+}
+
+.prox_reuniones{
+    h1{
+        @include h1;
+    }
+}
+
+    .card{
+        border: 3px solid #e9e9e9;
+        border-radius: 20px; 
+        font-family: campton;
+        width: 100%;
+        @media (max-width: 767px){
+            width: 70%;
+            margin-left: 15%;
+        }
+        @media (min-width: 768px) and (max-width: 992px){
+            margin-left: 110%;
+            width: 110%;
+        }
+        .card-body{
+            background-color: #e9e9e9;
+            margin: 8px;
+            border-radius: 20px;    
+            text-align: center;
+            @media (min-width: 992px) and (max-width: 1024px){
+                padding: 5px;
+            }
+            h3{
+                font-size: 15px;
+                font-weight: bold;
+            }
+            h4{
+                font-size: 12px;
+                font-weight: normal;
+            }
+            h5{
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+        .card-dos{
+             margin-left: 8px;
+             @media (min-width: 992px) and (max-width: 1024px){
+                margin-left: 0;
+                padding: 0px;
+            }
+            .img-perfil{
+                height: 50px;
+                width: 50px;   
+            }
+            .card-datos{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: center; 
+                h3{
+                    font-size: 12px;
+                    font-weight: bold;   
+                    @media (min-width: 992px) and (max-width: 1024px){
+                        font-size: 10px;
+                    }
+                }
+                h5{
+                    font-size: 12px;
+                    font-weight: normal; 
+                }
+            }
+        }
+        .lineas{
+            margin-left: 2em;
+            margin-right: 2em;
+            color: gray;
+            @media (max-width: 992px){
+                display: none;
+            }
+        }
+        .estrellas{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            margin: 8px;
+            @media (min-width: 993px) and (max-width: 1024px){
+                padding: 0;
+                margin: 0;
+            }
+            @media (max-width: 992px){
+                display: none;
+            }
+            .stars{
+                width: 10px;
+                height: 10px;
+            }
+        }
+        .img-emprendedor{
+            margin-top: 10px;
+            margin-left: 8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            @media (min-width: 992px) and (max-width: 1024px){
+                margin: 0;
+                padding: 0;
+            }
+            .imagen{
+                width: 33px;
+                height: 33px;
+                border-radius: 26.5px;
+            }
+            h5{
+                font-size: 13px;
+                font-weight: normal; 
+            }
+            span{
+                font-weight: bold; 
+            }
+        }
+        .redes{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            padding-bottom: 20px;
+            @media (max-width: 992px){
+                display: none;
+            }
+            
+            .rrss{
+                width: 10px;
+                height: 10px;  
+            }
+            h4{
+                color: #e9e9e9;
+                font-weight: normal;
+            }
+        }
+    }
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+} 
+
+/* display 3 */
+ @media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+} 
+
+.carousel-control-next-icon {
+    background-image: url("../img/svg/NAVEGADOR PROXIMAS REUNIONES.svg");
+    transform: rotate(180deg);
+}
+
+.carousel-control-prev-icon {
+    background-image: url("../img/svg/NAVEGADOR PROXIMAS REUNIONES.svg");
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
